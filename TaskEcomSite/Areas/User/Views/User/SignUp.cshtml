@@ -1,0 +1,42 @@
+﻿@model Dealerdb
+@{
+    ViewData["Title"] = "SignUp";
+}
+
+@*style=" background-image:radial-gradient(blue)*@
+<form method="post" style="background-color:darkkhaki; ">
+    <div class="border border-dark p-3 mt-4">
+        <div class="row pb-2 text-dark">
+            <h2> Register a User</h2>
+            <hr />
+        </div>
+        <div class="mb-3 text-dark">
+            <label asp-for="Name"> Username </label>
+            <input asp-for="Name" class="form-control" />
+        </div>
+        <div class="mb-3 text-dark">
+            <label asp-for="Email"> Email </label>
+            <input asp-for="Email" class="form-control" />
+        </div>
+        <div class="mb-3 text-dark">
+            <label asp-for="Password"> Password </label>
+            <input type="password" asp-for="Password" class="form-control" />
+        </div>
+        <div class="mb-3 text-dark">
+            <label asp-for="Phone"> Phone </label>
+            <input type="number" asp-for="Phone" class="form-control" />
+        </div>
+        <div class="mb-3 text-dark">
+            <label asp-for="Status"> Status </label>
+            <input asp-for="Status" class="form-control" />
+        </div>
+        <div class="mb-3 text-dark">
+            <label asp-for="Reason"> Reason </label>
+            <input asp-for="Reason" class="form-control" />
+        </div>
+        <button class="btn btn-primary" asp-controller="User" asp-action="Signup"> Click here to Register </button>
+        <a class="btn btn-primary" asp-controller="User" asp-action="Login">
+            Already a User? Login!
+        </a>
+    </div>
+</form>
